@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="renderer" content="webkit">
+
+    <title>PIE登录</title>
+
+
+    <link href="../css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css?v=4.3.0" rel="stylesheet">
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css?v=2.2.0" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+
+<div class="middle-box text-center loginscreen  animated fadeInDown">
+    <div>
+        <div>
+            <h1 class="logo-name">PIE</h1>
+        </div>
+        <h3>欢迎使用 PIE</h3>
+        <form class="m-t" role="form" id="form" action="../Farm_navigation.html">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="用户名" id="name"  name="loginname"required="">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="密码" id="password" name="password" required="">
+            </div>
+            <button type="button" id="btn" class="btn btn-primary block full-width m-b">登 录</button>
+
+
+            <p class="text-muted text-center"><a href="register.html">申请成为PIE会员</a>
+            </p>
+
+        </form>
+    </div>
+</div>
+
+<!-- Mainly scripts -->
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../js/bootstrap.min.js?v=3.4.0"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#btn").click(function () {
+            var date={
+                name:$("#name").val(),
+                password: $("#password").val()
+            }
+            var Date=JSON.stringify(date)
+            alert(Date);
+            $.post({
+                url: "http://localhost:8080/login",
+                headers: {
+                    "content-Type": "application/json;charset=utf-8"
+                }
+            },Date,function (data) {
+                var info=jQuery.trim(data)
+                switch (info) {
+                    case "屠宰场":
+                        location.assign("http://localhost:8080/Slaughter/Slaughter_navigation.html")
+                        break;
+                    case "养殖场":
+                        location.assign("http://localhost:8080/Farm/Farm_navigation.html")
+                        break;
+                    case "物流":
+                        location.assign("http://localhost:8080/Logistics/Logistics_navigation.html")
+                        break;
+                    case "超市":
+                        location.assign("http://localhost:8080/Market/Market_navigation.html")
+                        break;
+                    default :
+                        alert(info)
+                        break;
+                }
+            })
+        })
+    })
+</script>
+
+<script src="../js/plugins/validate/jquery.validate.min.js"></script>
+<script src="../js/plugins/validate/messages_zh.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#form").validate({
+            rules:{
+                loginname:{
+                    required:true,
+                    number:true,
+                    maxlength:6
+                },
+                password:{
+                    required:true,
+                    rangelength:[6,16]
+                }
+
+            }
+        })
+    })
+</script>
+
+</body>
+
+</html>

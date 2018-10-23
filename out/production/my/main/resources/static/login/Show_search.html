@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>PIE</title>
+    <link href="../css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css?v=4.3.0" rel="stylesheet">
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css?v=2.2.0" rel="stylesheet">
+
+</head>
+<body class="top-navigation">
+<div id="wrapper">
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom white-bg">
+            <nav class="navbar navbar-static-top" role="navigation">
+                <div class="navbar-header">
+                    <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                        <i class="fa fa-reorder"></i>
+                    </button>
+                    <a href="search.html#" class="navbar-brand">PIE</a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="nav navbar-nav" id="test">
+                        <li class="active">
+                            <a aria-expanded="false" role="button" href="search.html">返回主页</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <a href="login.html">
+                                <i class="fa fa-sign-out"></i> 退出
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="wrapper wrapper-content">
+                    <div class="text-center animated fadeInDown">
+                        <div>
+                            <div>
+                                <img src="../img/logo.png"/>
+                            </div>
+                            <form class="mail-search center-block">
+                                <div class="input-group">
+                                    <input type="text" placeho lder="猪肉ID" name="search" class="form-control input-lg" id="searchId">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-lg btn-primary" type="button" id="btnS">搜索</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row wrapper wrapper-content animated fadeInLeft" id="main">
+            <div v-if="status === 200">
+                <div  class="col-lg-4"  style="padding-top: 25px">
+                    <div class="ibox float-e-margins col-lg-12">
+                        <div class="ibox-title">
+                            <h5>🐖身份证</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>小猪ID</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h4 class="no-margins">{{result.id}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>出生日期</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h4 class="no-margins">{{result.birthday}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>猪品种</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h4 class="no-margins">{{result.breed}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>性别</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h4 class="no-margins">{{result.gender}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>排酸情况</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h4 class="no-margins">{{result.isacid}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>检疫情况</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h4 class="no-margins">{{result.ischeck}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ibox float-e-margins col-lg-12">
+                        <div class="ibox-title">
+                            <h5>养殖场信息</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <p><i class="fa fa-star"></i> 养殖场名称：
+                                <a href="#" target="_blank">{{result.farmName}}</a>
+                            </p>
+                            <p><i class="fa fa-home"></i> 养殖场地址：
+                                <a href="javascript:;">{{result.farmLocation}}</a>
+                            </p>
+                            <p><i class="fa fa-font"></i> 养殖场ID：
+                                <a href="javascript:;" class="">{{result.farmId}}</a>
+                            </p>
+                            <p><i class="fa fa-user"></i> 饲养员ID：
+                                <a href="javascript:;" class="">{{result.breederId}}</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ibox float-e-margins col-lg-12">
+                        <div class="ibox-title">
+                            <h5>屠宰场信息</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <p><i class="fa fa-star"></i> 屠宰场名称：
+                                <a href="#" target="_blank">{{result.slaughterhouseName}}</a>
+                            </p>
+                            <p><i class="fa fa-home"></i> 屠宰场地址：
+                                <a href="javascript:;">{{result.slaughterhouseLocation}}</a>
+                            </p>
+                            <p><i class="fa fa-font"></i> 屠宰场ID：
+                                <a href="javascript:;" class="">{{result.slaughterhouseId}}</a>
+                            </p>
+                            <p><i class="fa fa-user"></i> 排酸人员ID：
+                                <a href="javascript:;" class="">{{result.aciderId}}</a>
+                            </p>
+                            <p><i class="fa fa-user"></i> 检疫人员ID：
+                                <a href="javascript:;" class="">{{result.checkerId}}</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ibox float-e-margins col-lg-12">
+                        <div class="ibox-title">
+                            <h5>物流公司信息</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <p><i class="fa fa-star"></i> 物流公司名称：
+                                <a href="#" target="_blank">{{result.logisticsName}}</a>
+                            </p>
+                            <p><i class="fa fa-home"></i> 物流公司地址：
+                                <a href="javascript:;">{{result.logisticsLocation}}</a>
+                            </p>
+                            <p><i class="fa fa-font"></i> 物流公司ID：
+                                <a href="javascript:;" class="">{{result.logisticsId}}</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ibox float-e-margins col-lg-12">
+                        <div class="ibox-title">
+                            <h5>超市信息</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <p><i class="fa fa-star"></i> 超市名称：
+                                <a href="#" target="_blank">{{result.supermarketName}}</a>
+                            </p>
+                            <p><i class="fa fa-home"></i> 超市地址：
+                                <a href="javascript:;">{{result.supermarketLocation}}</a>
+                            </p>
+                            <p><i class="fa fa-font"></i> 超市ID：
+                                <a href="javascript:;" class="">{{result.supermarketId}}</a>
+                            </p>
+                            <p><i class="fa fa-font"></i> 售货员ID：
+                                <a href="javascript:;" class="">{{result.salespersonId}}</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 control-label" id="container" style="height: 300px">
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="col-lg-12">
+                        <div class="wrapper wrapper-content" style="padding-top: 0px">
+                            <div class="row animated fadeInRight">
+                                <div class="col-lg-12">
+                                    <div class="ibox float-e-margins">
+                                        <div class="" id="ibox-content">
+                                            <div id="vertical-timeline" class="vertical-container light-timeline">
+                                                <div class="vertical-timeline-block" v-for="site in result.operations">
+                                                    <div class="vertical-timeline-icon navy-bg">
+                                                        <i class="fa fa-briefcase"></i>
+                                                    </div>
+
+                                                    <div class="vertical-timeline-content">
+                                                        <h2>{{site.operation}}</h2>
+                                                        <h3>内容：{{site.content}}</h3>
+                                                        <h4>备注：{{site.remark}}</h4>
+                                                        <span class="vertical-date">
+                                                            <br>
+                                                            <small>{{site.time}}</small>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h3" v-else>
+                {{msg}}
+            </div>
+
+        </div>
+        <div class="footer">
+            <div class="pull-right">
+                By：<a href="http://www.zi-han.net" target="_blank">zihan's blog</a>
+            </div>
+            <div>
+                <strong>Copyright</strong> H+ &copy; 2014
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mainly scripts -->
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../js/bootstrap.min.js?v=3.4.0"></script>
+<script src="../js/vue.js"></script>
+<script src="../js/echarts.js"></script>
+<script type="text/javascript">
+    var dom = document.getElementById("container");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+    option = {
+        title: {
+            text: '折线图堆叠'
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data:['CO2','温度','湿度']
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['周一','周二','周三','周四','周五','周六','周日']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+                name:'CO2',
+                type:'line',
+                stack: '总量',
+                data:[120, 132, 101, 134, 90, 230, 210]
+            },
+            {
+                name:'温度',
+                type:'line',
+                stack: '总量',
+                data:[220, 182, 191, 234, 290, 330, 310]
+            },
+            {
+                name:'湿度',
+                type:'line',
+                stack: '总量',
+                data:[150, 232, 201, 154, 190, 330, 410]
+            }
+        ]
+    };
+    ;
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+</script>
+<script src="../js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>超市收货</title>
+    <link href="../css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css?v=4.3.0" rel="stylesheet">
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css?v=2.2.0" rel="stylesheet">
+
+</head>
+<body class="top-navigation">
+<div id="wrapper">
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom white-bg">
+            <nav class="navbar navbar-static-top" role="navigation">
+                <div class="navbar-header">
+                    <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                        <i class="fa fa-reorder"></i>
+                    </button>
+                    <a href="Market_navigation.html" class="navbar-brand">PIE</a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a aria-expanded="false" role="button" href="Market_navigation.html"> 返回主页</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li id="logout">
+                            <a href="">
+                                <i class="fa fa-sign-out"></i> 退出
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="middle-box text-center loginscreen   animated fadeInDown">
+            <form id="form">
+                <div class="ibox-content">
+                    <div>
+                        <h3 class="">超市收货</h3>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control col-lg-8" id="message" name="idarea" rows="3" placeholder="请输入猪的ID，以;隔开。最多10个"></textarea>
+                        <label for="message">&nbsp;</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="Marketid" name="mid" type="text" class="form-control" placeholder="超市ID" required="">
+                    </div>
+                    <button type="submit" class="btn btn-primary block full-width m-b" id="Btn">提交</button>
+                </div>
+            </form>
+        </div>
+
+
+
+        <div class="footer">
+            <div class="pull-right">
+                PIE
+            </div>
+            <div>
+                <strong>Copyright</strong> H+ &copy; 2014
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Mainly scripts -->
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../js/bootstrap.min.js?v=3.4.0"></script>
+<script>
+    $(function(){
+        $(document).ready(function(){
+            $("#Btn").click(function(){
+                var pig = {
+                    id: $("#message").val(),
+                    marketId: $("#Marketid").val()
+                };
+                var Pig=JSON.stringify(pig);
+                alert(Pig);
+                $.post({
+                    url: "http://localhost:8080/marketreception",
+                    headers: {
+                        "Content-Type": "application/json; charset=utf-8"
+                    }
+                }, Pig,function (data) {
+                    if(data=="请先登录")
+                    {
+                        alert(data);
+                        location.assign("http://localhost:8080/login/Login.html");
+                    }
+                    else {
+                        alert(data);
+                        location.reload();
+                    }
+                });
+            });
+        });
+    });
+
+</script>
+
+<script src="../js/plugins/validate/jquery.validate.min.js"></script>
+<script src="../js/plugins/validate/messages_zh.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#form").validate({
+            rules:{
+                mid:{
+                    required:true,
+                    number:true,
+                    maxlength:6
+                },
+                idarea:{
+                    required:true,
+                    maxlenghth:143,
+                    minlength:13
+                }
+            }
+        })
+    })
+</script>
+<script>
+    $("#logout").click(function(){
+        $.get("http://localhost:8080/logout",function () {
+            location.assign("http://localhost:8080/login/Login.html");
+        })
+    })
+</script>
+</body>
+</html>

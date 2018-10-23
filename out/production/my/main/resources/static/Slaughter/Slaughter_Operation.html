@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>屠宰操作</title>
+    <link href="../css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css?v=4.3.0" rel="stylesheet">
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css?v=2.2.0" rel="stylesheet">
+</head>
+<body class="top-navigation">
+<div id="wrapper">
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom white-bg">
+            <nav class="navbar navbar-static-top" role="navigation">
+                <div class="navbar-header">
+                    <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                        <i class="fa fa-reorder"></i>
+                    </button>
+                    <a href="Slaughter_navigation.html" class="navbar-brand">PIE</a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a aria-expanded="false" role="button" href="Slaughter_navigation.html"> 返回主页</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li id="logout">
+                            <a href="">
+                                <i class="fa fa-sign-out"></i> 退出
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="middle-box text-center loginscreen   animated fadeInDown">
+            <div class="ibox-content">
+                <div>
+                    <h3 class="">屠宰操作</h3>
+                </div>
+                <form class="m-t" id="form">
+                    <div class="form-group">
+                        <input id="pigId" type="text" class="form-control" name="pigid" placeholder="标号" required="">
+                    </div>
+                    <div class="form-group draggable">
+                        <div class="">
+                            <select class="form-control" id="selectW">
+                                <option>屠宰</option>
+                                <option>排酸</option>
+                                <option>分块</option>
+                                <option>包装</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" id="text">
+                        <label for="message">主要内容</label>
+                        <textarea class="form-control col-lg-8" id="message" rows="3" name="message"placeholder="请输入操作内容..."></textarea>
+                    </div>
+                    <div class="form-group" style="display: none" id="psrid">
+                        <input id="pspId" type="text" class="form-control" name="pspid" placeholder="排酸人ID" required="">
+                    </div>
+                    <div class="form-group" style="display: none" id="rad">
+                        <div class="col-sm-12">
+                            <div class="radio">
+                                <input type="radio" checked="" value="0" id="optionsRadios1" name="optionsRadios">已完成
+                            </div>
+                            <div class="radio">
+                                <input type="radio" value="1" id="optionsRadios2" name="optionsRadios">未完成
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">备注</label>
+                        <textarea class="form-control" id="remark" rows="3" name="remark"placeholder="请输入操作内容..."></textarea>
+                    </div>
+
+                    <button type="submit" id="Btn1" class="btn btn-primary block full-width m-b">提交</button>
+                    <button type="submit" id="Btn2" class="btn btn-primary block full-width m-b" style="display: none">提交</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="pull-right">
+                By：<a href="http://www.zi-han.net" target="_blank">zihan's blog</a>
+            </div>
+            <div>
+                <strong>Copyright</strong> H+ &copy; 2014
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<!-- Mainly scripts -->
+<script src="../js/jquery-3.3.1.js "></script>
+<script src="../js/bootstrap.min.js?v=3.4.0"></script>
+
+<script language="javascript" type="text/javascript">
+    $(function(){
+        $(document).ready(function(){
+            $("#selectW").change(function(){
+                var selectW = $(this).val();
+                if(selectW == "排酸"){
+                    $("#psrid").show().addClass("show");
+                    $("#rad").show().addClass("show");
+                    $("#text").hide().addClass("hidden");
+                    $("#Btn2").show().addClass("show");
+                    $("#Btn1").hide().addClass("hidden");
+                }else{
+                    $("#psrid").hide().removeClass("show");
+                    $("#rad").hide().removeClass("show");
+                    $("#text").show().removeClass("hidden");
+                    $("#Btn2").hide().removeClass("show");
+                    $("#Btn1").show().removeClass("hidden");
+                }
+            })
+        })
+    });
+</script>
+
+<script>
+    $(function(){
+        $(document).ready(function(){
+            $("#Btn1").click(function(){
+                var time=new Date();
+                var t=time.toLocaleString();
+                var pigMwork = {
+                    id: $("#pigId").val(),
+                    operation: $("#selectW").val(),
+                    content: $("#message").val(),
+                    remark: $("#remark").val(),
+                    time: t
+                };
+                var PigMwork=JSON.stringify(pigMwork);
+                alert(PigMwork);
+                $.post({
+                    url: "http://localhost:8080/slaughteroperation",
+                    headers: {
+                        "Content-Type": "application/json; charset=utf-8"
+                    }
+                }, PigMwork,function (data) {
+                    if(data=="请先登录")
+                    {
+                        alert(data);
+                        location.assign("http://localhost:8080/login/Login.html");
+                    }
+                    else {
+                        alert(data);
+                        location.reload();
+                    }
+                });
+            });
+        });
+    });
+</script>
+<script>
+    $(function(){
+        $(document).ready(function(){
+            $("#Btn2").click(function(){
+                var time=new Date();
+                var t=time.toLocaleString();
+                var pigAddacid = {
+                    id: $("#pigId").val(),
+                    operation: $("#selectW").val(),
+                    content: $("#pspId").val()+";"+$("input[name='optionsRadios']:checked").val(),
+                    remark: $("#remark").val(),
+                    time: t
+                };
+                var PigAddacid=JSON.stringify(pigAddacid);
+                alert(PigAddacid);
+                $.post({
+                    url: "http://localhost:8080/slaughteroperation",
+                    headers: {
+                        "Content-Type": "application/json; charset=utf-8"
+                    }
+                }, PigAddacid,function (data) {
+                    if(data=="请先登录")
+                    {
+                        alert(data);
+                        location.assign("http://localhost:8080/login/Login.html");
+                    }
+                    else {
+                        alert(data);
+                        location.reload();
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+<script src="../js/plugins/validate/jquery.validate.min.js"></script>
+<script src="../js/plugins/validate/messages_zh.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#form").validate({
+            rules:{
+                pigid:{
+                    required:true,
+                    number:true,
+                    minlength:13,
+                    maxlength:13
+                },
+                message:{
+                    required:true,
+                    minlength:10,
+                    maxlength:100
+                },
+                pspid:{
+                    required:true,
+                    number:true,
+                    minlength:18,
+                    maxlength:18
+                },
+                remark:{
+                    reangelength:[0,200]
+                }
+            }
+        })
+    })
+</script>
+<script>
+    $("#logout").click(function(){
+        $.get("http://localhost:8080/logout",function () {
+            location.assign("http://localhost:8080/login/Login.html");
+        })
+    })
+</script>
+
+
+
+</body>
+</html>
+
+
+

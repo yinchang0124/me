@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>日常操作</title>
+    <link href="../css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css?v=4.3.0" rel="stylesheet">
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css?v=2.2.0" rel="stylesheet">
+</head>
+<body class="top-navigation">
+<div id="wrapper">
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom white-bg">
+            <nav class="navbar navbar-static-top" role="navigation">
+                <div class="navbar-header">
+                    <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                        <i class="fa fa-reorder"></i>
+                    </button>
+                    <a href="index_4.html#" class="navbar-brand">PIE</a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a aria-expanded="false" role="button" href="Farm_navigation.html"> 返回主页</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <a href="../login/Login.html">
+                                <i class="fa fa-sign-out"></i> 退出
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="middle-box text-center loginscreen   animated fadeInDown">
+            <div>
+                <div>
+                    <h3 class="">日常操作</h3>
+                </div>
+
+                <form class="m-t" role="form" id="form" >
+                    <div class="form-group" >
+                        <input type="text" class="form-control" placeholder="请输入13位小猪标号" required="" id="id" name="pigId">
+                    </div>
+                    <div class="form-group draggable">
+                        <div class="">
+                            <select class="form-control" id="operation" name="Operation">
+                                <option>喂食</option>
+                                <option>健康</option>
+                                <option>防疫</option>
+                                <option>出栏体重</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">主要内容</label>
+                        <textarea class="form-control col-lg-8" id="content" name="Content" rows="3" placeholder="请输入操作内容(50字以内)..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="remark">备注</label>
+                        <textarea class="form-control" id="remark" name="Remark" rows="3" placeholder="请输入备注信息(50字以内)..."></textarea>
+                    </div>
+
+                    <button type="button" class="btn btn-primary block full-width m-b" id="btnfo">提交</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="pull-right">
+                By：<a href="http://www.zi-han.net" target="_blank">zihan's blog</a>
+            </div>
+            <div>
+                <strong>Copyright</strong> H+ &copy; 2014
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<!-- Mainly scripts -->
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../js/bootstrap.min.js?v=3.4.0"></script>
+<script src="../js/plugins/validate/jquery.validate.min.js"></script>
+<script src="../js/plugins/validate/messages_zh.min.js"></script>
+
+<script>
+    $(function(){
+        $(document).ready(function(){
+            $("#btnfo").click(function(){
+                var time=new Date();
+                var t=time.toLocaleString();
+                //alert(str);
+
+                var f_operation = {
+                    id: $("#id").val(),
+                    operation: $("#operation").val(),
+                    content: $("#content").val(),
+                    remark: $("#remark").val(),
+                    time: t
+
+                }
+                var F_operation=JSON.stringify(f_operation);
+                //alert(Pig);
+                $.post({
+                    url: "http://localhost:8080/farmoperation",
+                    headers: {
+                        "Content-Type": "application/json; charset=utf-8"
+                    }
+                }, F_operation,function (data){
+                    if(data=="请先登录")
+                    {
+                        alert(data);
+                        location.assign("http://localhost:8080/login/Login.html");
+                    }
+                    else {
+                        alert(data);
+                        location.reload();
+                    }
+                })
+            });
+        });
+    });
+
+</script>
+
+
+
+<script>
+    $(document).ready(function () {
+        $("#form").validate({
+            rules:{
+                pigId:{
+                    required:true,
+                    number:true,
+                    maxlength:13
+                },
+                Content:{
+                    required:true,
+                    maxlength:50
+                },
+                Remark:{
+                    required:true,
+                    maxlength:50
+                }
+            }
+        })
+    })
+</script>
+<script>
+    $("#logout").click(function(){
+        $.get("http://localhost:8080/logout",function () {
+            location.assign("http://localhost:8080/login/Login.html");
+        })
+    })
+</script>
+
+</body>
+</html>
+
+
+
