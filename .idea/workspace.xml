@@ -1,58 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/study/nodejs/get.js" line="5" mnemonic="9" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="b710e034-3a92-41fb-b30a-9e901f75ba90" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/contract/JD.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/contract/Ownable.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/contract/pig.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/buffrer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/event.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/event1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/event2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/file.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/get.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/hello.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/hello1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/hello2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/hellomodule.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/hellomodule1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/hellomodule2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/main1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/main/java/study/nodejs/web.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/my/test/son.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/client.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/express_demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/file.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/get.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/hello.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/hello1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/hello2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/hellomodule.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/hellomodule1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/hellomodule2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/web.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/express_demo1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/express_demo2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/express_demo3_get.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/express_demo4_post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/images/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/index1_get.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/index1_post.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/my/test/Son.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/my/test/Son.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/nodejs/buffrer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/buffrer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/nodejs/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/nodejs/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/nodejs/main1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/nodejs/main1.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -114,89 +71,54 @@
     <session id="-1394330346">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="1" />
-          <entry key="js" value="37" />
+          <entry key="html" value="3" />
+          <entry key="js" value="45" />
           <entry key="json" value="1" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="1" />
+          <entry key="HTML" value="3" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="37" />
+          <entry key="JavaScript" value="45" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="33" />
-          <entry key="js" value="4461" />
+          <entry key="html" value="41" />
+          <entry key="js" value="5802" />
+          <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="33" />
-          <entry key="JavaScript" value="4461" />
+          <entry key="HTML" value="41" />
+          <entry key="JavaScript" value="5802" />
+          <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/study/nodejs/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/study/nodejs/web.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/study/nodejs/client.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/study/nodejs/express_demo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
         <option value="Class" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -242,6 +164,13 @@
         <option value="$PROJECT_DIR$/src/main/java/study/nodejs/web.js" />
         <option value="$PROJECT_DIR$/src/main/java/study/nodejs/client.js" />
         <option value="$PROJECT_DIR$/src/main/java/study/nodejs/express_demo.js" />
+        <option value="$PROJECT_DIR$/src/main/java/study/nodejs/express_demo1.js" />
+        <option value="$PROJECT_DIR$/src/main/java/study/nodejs/express_demo2.js" />
+        <option value="$PROJECT_DIR$/src/main/java/study/nodejs/index1.html" />
+        <option value="$PROJECT_DIR$/src/main/java/study/nodejs/express_demo_post.js" />
+        <option value="$PROJECT_DIR$/src/main/java/study/nodejs/express_demo3_get.js" />
+        <option value="$PROJECT_DIR$/src/main/java/study/nodejs/index1_post.html" />
+        <option value="$PROJECT_DIR$/src/main/java/study/nodejs/express_demo4_post.js" />
       </list>
     </option>
   </component>
@@ -305,8 +234,8 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="2560" />
-    <option name="width" value="1390" />
-    <option name="height" value="1006" />
+    <option name="width" value="2560" />
+    <option name="height" value="1440" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -370,19 +299,23 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542192449292" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PIE" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542254283457" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../electron-quick-start" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/study/nodejs" />
-      <recent name="E:\溯源\my" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="main.java.study.nodejs" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\溯源\my\src\main\resources" />
       <recent name="E:\溯源\my\src\main\resources\static" />
       <recent name="E:\溯源\my\src\main\java\study" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/study/nodejs/pub/images" />
+      <recent name="$PROJECT_DIR$/src/main/java/study/nodejs" />
+      <recent name="E:\溯源\my" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -449,17 +382,27 @@
       <workItem from="1540365125072" duration="1124000" />
       <workItem from="1542025408148" duration="44000" />
       <workItem from="1542089661522" duration="8962000" />
-      <workItem from="1542159964829" duration="23023000" />
+      <workItem from="1542159964829" duration="23320000" />
+      <workItem from="1542245978193" duration="7510000" />
+      <workItem from="1542254449241" duration="1233000" />
     </task>
+    <task id="LOCAL-00001" summary="11.14">
+      <created>1542192473612</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1542192473612</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41542000" />
+    <option name="totallyTimeSpent" value="50582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2560" y="0" width="2560" height="1440" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15961692" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1629393" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -467,14 +410,14 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32994527" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.45709828" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.375195" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3752932" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3297546" />
       <window_info anchor="bottom" id="Messages" order="11" />
@@ -499,6 +442,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/me" />
     </ignored-roots>
+    <MESSAGE value="11.14" />
+    <option name="LAST_COMMIT_MESSAGE" value="11.14" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -516,8 +461,8 @@
     <entry file="jar://D:/jdk/src.zip!/java/util/Collection.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/static/js/vue.js" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/messages_en_US.properties">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/study/dao/implement/test.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -721,20 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/study/nodejs/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/study/nodejs/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/study/nodejs/web.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -745,14 +676,70 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/study/nodejs/client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
-          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/study/nodejs/express_demo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/study/nodejs/express_demo1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/study/nodejs/express_demo2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/study/nodejs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/study/nodejs/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/study/nodejs/index1_get.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="7" lean-forward="true" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/study/nodejs/express_demo3_get.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/study/nodejs/index1_post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/study/nodejs/express_demo4_post.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
         </state>
       </provider>
     </entry>
